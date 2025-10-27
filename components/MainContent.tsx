@@ -1,22 +1,5 @@
-interface Analysis {
-  id: number;
-  url: string;
-  timestamp: string;
-  scores: Scores;
-  title: string;
-  fullUrl: string;
-}
+import type { MainContentProps} from "../src/types/interfaces"
 
-interface Scores {
-  performance: number;
-  seo: number;
-  accessibility: number;
-  overall: number;
-}
-
-interface MainContentProps {
-  analysis: Analysis | undefined;
-}
 
 
 const MainContent: React.FC<MainContentProps> = ({ analysis }) => {
