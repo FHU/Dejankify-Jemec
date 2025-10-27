@@ -1,47 +1,5 @@
 import React, { useState } from 'react';
 
-// Types and Interfaces
-interface Scores {
-  performance: number;
-  seo: number;
-  accessibility: number;
-  overall: number;
-}
-
-interface Analysis {
-  id: number;
-  url: string;
-  timestamp: string;
-  scores: Scores;
-  title: string;
-  fullUrl: string;
-}
-
-interface Metric {
-  title: string;
-  icon: string;
-  value: string;
-  unit: string;
-  target: string;
-}
-
-type IssueSeverity = 'critical' | 'warning' | 'info';
-
-interface Issue {
-  severity: IssueSeverity;
-  title: string;
-  description: string;
-  recommendation: string;
-}
-
-interface IssuesCollection {
-  performance: Issue[];
-  seo: Issue[];
-  accessibility: Issue[];
-  bestPractices: Issue[];
-}
-
-type ScoreColorClass = 'excellent' | 'good' | 'fair' | 'poor';
 
 // Sample data
 const sampleAnalyses: Analysis[] = [
@@ -173,48 +131,7 @@ const getScoreColorClass = (score: number): ScoreColorClass => {
   return 'poor';
 };
 
-// Component Props Interfaces
-interface SidebarProps {
-  analyses: Analysis[];
-  activeId: number;
-  onSelectAnalysis: (id: number) => void;
-  urlInput: string;
-  setUrlInput: (value: string) => void;
-  onAnalyze: () => void;
-}
 
-interface HistoryItemProps {
-  analysis: Analysis;
-  isActive: boolean;
-  onClick: () => void;
-}
-
-interface ScoreCircleProps {
-  score: number;
-  label: string;
-  sublabel: string;
-}
-
-interface MetricCardProps {
-  metric: Metric;
-}
-
-interface IssueItemProps {
-  issue: Issue;
-}
-
-interface SectionProps {
-  title: string;
-  subtitle: string;
-  icon: string;
-  score: number;
-  issues: Issue[];
-  iconBg: string;
-}
-
-interface MainContentProps {
-  analysis: Analysis | undefined;
-}
 
 // Components
 const Sidebar: React.FC<SidebarProps> = ({ 
