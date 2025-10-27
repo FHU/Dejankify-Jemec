@@ -1,7 +1,7 @@
 import type { SectionProps} from "../src/types/interfaces"
 import {IssueItem} from "/IssueItem"
 
-export const Section: React.FC<SectionProps> = ({ title, subtitle, icon, score, issues, iconBg }) => {
+const Section: React.FC<SectionProps> = ({ title, subtitle, icon, score, issues, iconBg }) => {
   const getScoreBgClass = (score: number): string => {
     if (score >= 80) return 'bg-green-100 text-green-800';
     if (score >= 50) return 'bg-yellow-100 text-yellow-800';
@@ -31,3 +31,5 @@ export const Section: React.FC<SectionProps> = ({ title, subtitle, icon, score, 
     </div>
   );
 };
+
+export default Section
