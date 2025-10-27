@@ -25,7 +25,7 @@ export interface Metric {
   target: string;
 }
 
-type IssueSeverity = 'critical' | 'warning' | 'info';
+export type IssueSeverity = 'critical' | 'warning' | 'info';
 
 export interface Issue {
   severity: IssueSeverity;
