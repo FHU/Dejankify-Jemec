@@ -1,5 +1,5 @@
-import type { SectionProps} from "../src/types/interfaces"
-import IssueItem from "../components/IssueItem";
+import type { SectionProps} from "../types/interfaces"
+import IssueItem from "./IssueItem";
 
 const Section: React.FC<SectionProps> = ({ title, subtitle, icon, score, issues, iconBg }) => {
   const getScoreBgClass = (score: number): string => {

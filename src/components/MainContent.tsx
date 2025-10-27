@@ -1,4 +1,4 @@
-import type { MainContentProps} from "../src/types/interfaces"
+import type { MainContentProps} from "../types/interfaces"
 
 
 

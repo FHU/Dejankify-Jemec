@@ -1,4 +1,4 @@
-import type { IssueItemProps, IssueSeverity} from "../src/types/interfaces"
+import type { IssueItemProps, IssueSeverity} from "../types/interfaces"
 
 const IssueItem: React.FC<IssueItemProps> = ({ issue }) => {
   interface SeverityConfig {
