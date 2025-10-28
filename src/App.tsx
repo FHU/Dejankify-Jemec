@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import MainContent from './components/MainContent'
 import type { Analysis } from './types/interfaces'
 import Section from './components/Section'
-import type { Issue, IssuesCollection } from './types/interfaces'
+import type { IssuesCollection } from './types/interfaces'
 
 const sampleIssues: IssuesCollection = {
   performance: [
