@@ -82,6 +82,10 @@ export interface SectionProps {
   iconBg: string;
 }
 
+export interface ScoreNumberProps {
+  score: number;
+}
+
 export interface MainContentProps {
   analysis: Analysis | undefined;
 }
