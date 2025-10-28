@@ -14,9 +14,7 @@ const Section: React.FC<SectionProps> = ({ title, subtitle, icon, score, issues,
           <h2 className="text-xl font-extrabold text-gray-900 mb-1">{title}</h2>
           <div className="text-[13px] text-gray-600">{subtitle}</div>
         </div>
-
         <ScoreNumberBox score={score}/>
-       
       </div>
 
       <div className="flex flex-col gap-4">

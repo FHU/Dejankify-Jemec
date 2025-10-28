@@ -1,4 +1,5 @@
 import type { IssueItemProps, IssueSeverity} from "../types/interfaces"
+import Recommendation from "./Recommendation";
 
 const IssueItem: React.FC<IssueItemProps> = ({ issue }) => {
   interface SeverityConfig {
@@ -45,13 +46,7 @@ const IssueItem: React.FC<IssueItemProps> = ({ issue }) => {
         <div className="text-sm text-gray-700 leading-relaxed mb-3">
           {issue.description}
         </div>
-        <div className="text-[13px] text-gray-900 bg-white p-3 rounded-lg border border-gray-200 leading-relaxed">
-          <div className="font-bold text-indigo-600 mb-1.5 flex items-center gap-1.5">
-            <span>💡</span>
-            <span>Recommendation</span>
-          </div>
-          {issue.recommendation}
-        </div>
+      <Recommendation recommendation={issue.recommendation} />
       </div>
     </div>
   );
